@@ -12,10 +12,23 @@
     <artifactId>micro-service-account</artifactId>
 
     <dependencies>
+        <!-- 框架整合模块依赖 -->
         <dependency>
             <groupId>cn.microservice.www</groupId>
             <artifactId>micro-service-framework</artifactId>
             <version>${project.version}</version>
+        </dependency>
+        <!-- Spring Boot Test 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

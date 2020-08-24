@@ -16,12 +16,12 @@ import java.time.LocalDateTime;
 public class Account {
     @TableId(type = IdType.ASSIGN_ID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private long id;
+    private Long id;
     private String picture;
     private String name;
     private String password;
     private String nickname;
-    private int gender;
+    private Integer gender;
     private String remark;
     @Version
     private Integer version;
