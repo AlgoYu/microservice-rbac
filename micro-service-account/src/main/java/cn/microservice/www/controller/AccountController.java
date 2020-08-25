@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
+
 /**
  * 账户控制器
  * @author MachineGeek
@@ -22,6 +24,8 @@ public class AccountController{
     @ApiOperation(value = "添加账户")
     @PostMapping(value = "/add")
     public Result add(@RequestBody Account account){
+        account.setCreateTime(LocalDateTime.now());
+        account.setUpdateTime(LocalDateTime.now());
         accountService.save(account);
         return Result.success(account.getId());
     }
@@ -36,6 +40,7 @@ public class AccountController{
     @ApiOperation(value = "修改账户")
     @PutMapping(value = "/modifyById")
     public Result modifyById(@RequestBody Account account){
+        account.setUpdateTime(LocalDateTime.now());
         return Result.success(accountService.updateById(account));
     }
 

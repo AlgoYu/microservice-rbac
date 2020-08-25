@@ -1,6 +1,7 @@
 package cn.microservice.www.model;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.Version;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -17,16 +18,18 @@ public class Account {
     @TableId(type = IdType.ASSIGN_ID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
-    private String picture;
-    private String name;
-    private String password;
-    private String nickname;
-    private Integer gender;
-    private String remark;
-    private Integer enable;
-    private Integer delete;
+    private String accountPicture;
+    private String accountName;
+    private String accountPassword;
+    private String accountNickname;
+    private Integer accountGender;
+    private String accountRemark;
+    private Boolean isEnable;
+    private Boolean isDelete;
     @Version
     private Integer version;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 }

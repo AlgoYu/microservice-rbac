@@ -1,11 +1,11 @@
 # 服务器配置
 server:
-  port: 12000
+  port: 10000
 # Spring配置
 spring:
   # 服务名称
   application:
-    name: MICRO-SERVICE-ACCOUNT
+    name: MICRO-SERVICE-GATEWAY
   # MVC配置
   mvc:
     log-request-details: true
@@ -20,26 +20,30 @@ spring:
     nacos:
       discovery:
         server-addr: development.machine-geek.cn:8848
-  # 数据源配置
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://development.machine-geek.cn:3306/micro_service?useSSL=false&&serverTimezone=GMT%2B8&useInformationSchema=true
-    username: root
-    password: 123456
-    # Druid配置
-    druid:
-      initial-size: 5
-      max-active: 10
-      max-wait: 10000
+    # Gateway配置
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: account_route
+          uri: lb://MICRO-SERVICE-ACCOUNT
+          predicates:
+            - Path=/account/**
+        - id: role_route
+          uri: lb://MICRO-SERVICE-ROLE
+          predicates:
+            - Path=/role/**
+        - id: permission_route
+          uri: lb://MICRO-SERVICE-PERMISSION
+          predicates:
+            - Path=/permission/**
 # 暴露端点
 management:
   endpoints:
     web:
       exposure:
         include: '*'
-# mybatis配置
-mybatis-plus:
-  mapper-locations: classpath:/mapper/*.xml
 # 日志配置
 logging:
   level:

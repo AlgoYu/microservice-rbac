@@ -5,7 +5,7 @@ server:
 spring:
   # 服务名称
   application:
-    name: CLOUD-SERVICE-PERMISSION
+    name: MICRO-SERVICE-PERMISSION
   # MVC配置
   mvc:
     log-request-details: true

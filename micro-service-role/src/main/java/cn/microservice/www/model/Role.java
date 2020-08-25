@@ -17,10 +17,10 @@ public class Role {
     @TableId(type = IdType.ASSIGN_ID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
-    private String name;
-    private String remark;
-    private Integer enable;
-    private Integer delete;
+    private String roleName;
+    private String roleRemark;
+    private Boolean isEnable;
+    private Boolean isDelete;
     @Version
     private Integer version;
     private LocalDateTime createTime;

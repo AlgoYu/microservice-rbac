@@ -17,12 +17,12 @@ public class Permission {
     @TableId(type = IdType.ASSIGN_ID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
-    private String name;
-    private String remark;
-    private Integer enable;
+    private String permissionName;
+    private String permissionRemark;
+    private Boolean isEnable;
+    private Boolean isDelete;
     @Version
     private Integer version;
-    private Integer delete;
     private LocalDateTime updateTime;
     private LocalDateTime createTime;
 }
