@@ -20,6 +20,13 @@ spring:
     nacos:
       discovery:
         server-addr: development.machine-geek.cn:8848
+  # zipkin配置
+  zipkin:
+    base-url: http://development.machine-geek.cn:9411
+  # sleuth配置
+  sleuth:
+    sampler:
+      percentage: 1.0
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
