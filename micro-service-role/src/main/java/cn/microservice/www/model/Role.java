@@ -9,19 +9,15 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * 账户类
+ * 角色类
  * @author MachineGeek
  */
 @Data
-public class Account {
+public class Role {
     @TableId(type = IdType.ASSIGN_ID)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
-    private String picture;
     private String name;
-    private String password;
-    private String nickname;
-    private Integer gender;
     private String remark;
     private Integer enable;
     private Integer delete;

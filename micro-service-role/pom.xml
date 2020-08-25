@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>micro-service-account</artifactId>
+    <artifactId>micro-service-role</artifactId>
 
     <dependencies>
         <!-- 框架整合模块依赖 -->
