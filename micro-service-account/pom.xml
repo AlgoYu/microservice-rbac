@@ -15,7 +15,7 @@
         <!-- 框架整合模块依赖 -->
         <dependency>
             <groupId>cn.microservice.www</groupId>
-            <artifactId>micro-service-framework</artifactId>
+            <artifactId>micro-service-web</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

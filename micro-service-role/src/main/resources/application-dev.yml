@@ -1,0 +1,46 @@
+# 服务器配置
+server:
+  port: 12500
+# Spring配置
+spring:
+  # 服务名称
+  application:
+    name: CLOUD-SERVICE-ROLE
+  # MVC配置
+  mvc:
+    log-request-details: true
+  # DevTools配置
+  devtools:
+    restart:
+      exclude: classpath:static/*
+      log-condition-evaluation-delta: false
+  # Cloud配置
+  cloud:
+    # Nacos配置
+    nacos:
+      discovery:
+        server-addr: development.machine-geek.cn:8848
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://development.machine-geek.cn:3306/micro_service?useSSL=false&&serverTimezone=GMT%2B8&useInformationSchema=true
+    username: root
+    password: 123456
+    # Druid配置
+    druid:
+      initial-size: 5
+      max-active: 10
+      max-wait: 10000
+# 暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+# mybatis配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+# 日志配置
+logging:
+  level:
+    org.springframework.web: debug

@@ -12,6 +12,8 @@
         <module>micro-service-account</module>
         <module>micro-service-framework</module>
         <module>micro-service-role</module>
+        <module>micro-service-web</module>
+        <module>micro-service-permission</module>
     </modules>
     <packaging>pom</packaging>
 
