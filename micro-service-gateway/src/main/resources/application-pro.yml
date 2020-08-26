@@ -48,4 +48,3 @@ management:
 logging:
   level:
     org.springframework.web: debug
-    com.alibaba.nacos: warn

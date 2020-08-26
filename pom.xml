@@ -29,6 +29,7 @@
         <mysql-connector.version>8.0.21</mysql-connector.version>
         <druid.version>1.1.22</druid.version>
         <swagger.version>3.0.0</swagger.version>
+        <jbcrypt.version>0.4</jbcrypt.version>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -105,6 +106,12 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-boot-starter</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <!-- Jbcrypt 依赖 -->
+            <dependency>
+                <groupId>org.mindrot</groupId>
+                <artifactId>jbcrypt</artifactId>
+                <version>${jbcrypt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
