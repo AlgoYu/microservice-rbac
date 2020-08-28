@@ -8,19 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>micro-service-module</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>micro-service-redis</module>
-        <module>micro-service-swagger</module>
-        <module>micro-service-web</module>
-        <module>micro-service-database</module>
-        <module>micro-service-common</module>
-        <module>micro-service-config</module>
-        <module>micro-service-discovery</module>
-        <module>micro-service-mq</module>
-        <module>micro-service-cloud</module>
+        <module>micro-service-admin</module>
     </modules>
-
-    <artifactId>micro-service-framework</artifactId>
 
 </project>

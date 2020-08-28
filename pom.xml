@@ -8,13 +8,9 @@
     <artifactId>micro-service-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>micro-service-common</module>
-        <module>micro-service-account</module>
         <module>micro-service-framework</module>
-        <module>micro-service-role</module>
-        <module>micro-service-web</module>
-        <module>micro-service-permission</module>
         <module>micro-service-gateway</module>
+        <module>micro-service-module</module>
     </modules>
     <packaging>pom</packaging>
 

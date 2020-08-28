@@ -1,6 +1,0 @@
-# 配置中心配置
-spring:
-  cloud:
-    nacos:
-      config:
-        server-addr: development.machine-geek.cn:80

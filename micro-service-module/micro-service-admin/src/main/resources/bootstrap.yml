@@ -1,10 +1,10 @@
 # Tomcat
 server:
-  port: 10000
+  port: 11000
 spring:
   # 服务名称
   application:
-    name: MICRO-SERVICE-GATEWAY
+    name: MICRO-SERVICE-ADMIN
   # 启用配置
   profiles:
     active: DEV
@@ -19,7 +19,7 @@ spring:
         file-extension: yaml
         namespace: Public
         group: DEVELOPMENT
-        prefix: MICRO-SERVICE-GATEWAY
+        prefix: MICRO-SERVICE-ADMIN
 # 日志
 logging:
   level:
