@@ -12,6 +12,12 @@
     <artifactId>micro-service-database</artifactId>
 
     <dependencies>
+        <!-- 通用模块依赖 -->
+        <dependency>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- Connector J 依赖 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -26,6 +32,11 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <!-- Jackson Annotation 依赖 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
         </dependency>
     </dependencies>
 

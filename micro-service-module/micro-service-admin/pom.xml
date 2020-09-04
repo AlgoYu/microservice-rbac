@@ -18,31 +18,17 @@
             <artifactId>micro-service-web</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- Spring Cloud Alibaba Nacos Discovery 依赖-->
+        <!-- Admin Api 项目模块依赖 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-admin-api</artifactId>
+            <version>${project.version}</version>
         </dependency>
-        <!-- Spring Cloud Alibaba Nacos Config 依赖-->
+        <!-- Alibaba 项目模块依赖 -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <!-- Spring Cloud Alibaba Sentinel 依赖-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-            <exclusions>
-                <exclusion>
-                    <artifactId>jackson-dataformat-xml</artifactId>
-                    <groupId>com.fasterxml.jackson.dataformat</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- Spring Cloud Zipkin 依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-alibaba</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

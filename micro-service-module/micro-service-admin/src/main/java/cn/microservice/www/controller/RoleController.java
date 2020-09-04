@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/role")
 public class RoleController {
-    @Autowired
+    //@Autowired
     private RoleService roleSrv;
 
     @PostMapping(value = "/add")
@@ -28,13 +28,13 @@ public class RoleController {
     @DeleteMapping(value = "/deleteById")
     public Result deleteById(@RequestParam(value = "id")String id){
         roleSrv.removeById(id);
-        return Result.ok;
+        return Result.ok();
     }
 
     @PutMapping(value = "/modify")
     public Result modify(@RequestBody Role role){
         roleSrv.updateById(role);
-        return Result.ok;
+        return Result.ok();
     }
 
     @GetMapping(value = "/getById")

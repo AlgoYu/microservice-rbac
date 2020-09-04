@@ -17,29 +17,29 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/account")
 public class AccountController {
     @Autowired
-    private AccountService accountSrv;
+    private AccountService accountService;
 
     @PostMapping(value = "/add")
     public Result add(@RequestBody Account account){
-        accountSrv.save(account);
+        accountService.save(account);
         return Result.ok(account.getId());
     }
 
     @DeleteMapping(value = "/deleteById")
     public Result deleteById(@RequestParam(value = "id")String id){
-        accountSrv.removeById(id);
-        return Result.ok;
+        accountService.removeById(id);
+        return Result.ok();
     }
 
     @PutMapping(value = "/modify")
     public Result modify(@RequestBody Account account){
-        accountSrv.updateById(account);
-        return Result.ok;
+        accountService.updateById(account);
+        return Result.ok();
     }
 
     @GetMapping(value = "/getById")
     public Result getById(@RequestParam(value = "id")String id){
-        return Result.ok(accountSrv.getById(id));
+        return Result.ok(accountService.getById(id));
     }
 
     @GetMapping(value = "/page")
@@ -47,11 +47,11 @@ public class AccountController {
         QueryWrapper<Account> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().like(Account::getAccountNickname,pageDto.getKeyWord())
                 .orderByDesc(Account::getUpdateTime);
-        return Result.ok(accountSrv.page(new Page<Account>(),queryWrapper));
+        return Result.ok(accountService.page(new Page<Account>(),queryWrapper));
     }
 
     @GetMapping(value = "/all")
     public Result all(){
-        return Result.ok(accountSrv.list());
+        return Result.ok(accountService.list());
     }
 }

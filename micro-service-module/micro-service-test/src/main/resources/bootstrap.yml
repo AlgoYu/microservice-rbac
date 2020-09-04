@@ -1,0 +1,26 @@
+# Tomcat
+server:
+  port: 14000
+spring:
+  # 服务名称
+  application:
+    name: MICRO-SERVICE-TEST
+  # 启用配置
+  profiles:
+    active: DEV
+  cloud:
+    nacos:
+      # 服务发现
+      discovery:
+        server-addr: development.machine-geek.cn:80
+      # 配置中心
+      config:
+        server-addr: development.machine-geek.cn:80
+        file-extension: yaml
+        namespace: Public
+        group: DEVELOPMENT
+        prefix: MICRO-SERVICE-TEST
+# 日志
+logging:
+  level:
+    com.alibaba.nacos: warn

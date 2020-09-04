@@ -10,12 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>micro-service-redis</module>
         <module>micro-service-web</module>
         <module>micro-service-database</module>
         <module>micro-service-common</module>
-        <module>micro-service-discovery</module>
-        <module>micro-service-mq</module>
+        <module>micro-service-alibaba</module>
     </modules>
 
     <artifactId>micro-service-framework</artifactId>

@@ -20,7 +20,11 @@ public class Result<T>{
     /**
      * 成功常量
      */
-    public static final Result ok = new Result(Constant.SUCCESS,null,null);
+    private static final Result SUCCESS = new Result(Constant.SUCCESS,null,null);
+
+    public static Result ok(){
+        return SUCCESS;
+    }
 
     /**
      * 返回成功结果

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>micro-service-parent</artifactId>
+        <groupId>cn.microservice.www</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>micro-service-auth</artifactId>
+
+    <dependencies>
+        <!-- Web 项目模块依赖 -->
+        <dependency>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Alibaba 项目模块依赖 -->
+        <dependency>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-alibaba</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Admin API 项目模块依赖 -->
+        <dependency>
+            <groupId>cn.microservice.www</groupId>
+            <artifactId>micro-service-admin-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- Spring Redis 依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!-- Spring Cloud OAuth 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

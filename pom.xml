@@ -11,6 +11,8 @@
         <module>micro-service-framework</module>
         <module>micro-service-gateway</module>
         <module>micro-service-module</module>
+        <module>micro-service-api</module>
+        <module>micro-service-auth</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -20,12 +22,13 @@
         <spring.cloud.version>Hoxton.SR7</spring.cloud.version>
         <spring.cloud.alibaba.version>2.2.1.RELEASE</spring.cloud.alibaba.version>
         <lombok.version>1.18.12</lombok.version>
-        <jackson.version>2.11.1</jackson.version>
+        <jackson-annotation.version>2.11.2</jackson-annotation.version>
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <mysql-connector.version>8.0.21</mysql-connector.version>
         <druid.version>1.1.22</druid.version>
-        <swagger.version>3.0.0</swagger.version>
+        <knife4j.version>2.0.2</knife4j.version>
         <jbcrypt.version>0.4</jbcrypt.version>
+        <dubbo.version>2.7.8</dubbo.version>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -61,11 +64,11 @@
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <!-- Jackson 依赖 -->
+            <!-- Jackson Annotation 依赖 -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson.version}</version>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-annotation.version}</version>
             </dependency>
             <!-- MyBatis Plus 依赖 -->
             <dependency>
@@ -85,29 +88,24 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-            <!-- Swagger3 依赖 -->
+            <!-- Knife4j 依赖-->
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <!-- Swagger3 UI 依赖 -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <!-- Spring Fox 依赖 -->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>${swagger.version}</version>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-micro-spring-boot-starter</artifactId>
+                <!--在引用时请在maven中央仓库搜索最新版本号-->
+                <version>${knife4j.version}</version>
             </dependency>
             <!-- Jbcrypt 依赖 -->
             <dependency>
                 <groupId>org.mindrot</groupId>
                 <artifactId>jbcrypt</artifactId>
                 <version>${jbcrypt.version}</version>
+            </dependency>
+            <!-- Dubbo 依赖 -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

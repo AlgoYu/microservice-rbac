@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/permission")
 public class PermissionController {
-    @Autowired
+    //@Autowired
     private PermissionService permissionSrv;
 
     @PostMapping(value = "/add")
@@ -28,13 +28,13 @@ public class PermissionController {
     @DeleteMapping(value = "/deleteById")
     public Result deleteById(@RequestParam(value = "id")String id){
         permissionSrv.removeById(id);
-        return Result.ok;
+        return Result.ok();
     }
 
     @PutMapping(value = "/modify")
     public Result modify(@RequestBody Permission permission){
         permissionSrv.updateById(permission);
-        return Result.ok;
+        return Result.ok();
     }
 
     @GetMapping(value = "/getById")

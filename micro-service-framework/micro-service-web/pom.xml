@@ -18,18 +18,6 @@
             <artifactId>micro-service-common</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <!-- 数据库模块依赖 -->
-        <dependency>
-            <groupId>cn.microservice.www</groupId>
-            <artifactId>micro-service-database</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <!-- Redis模块依赖 -->
-        <dependency>
-            <groupId>cn.microservice.www</groupId>
-            <artifactId>micro-service-redis</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <!-- Spring Boot Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -56,11 +44,5 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-        <!-- Spring Fox 依赖 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-        </dependency>
     </dependencies>
-
 </project>

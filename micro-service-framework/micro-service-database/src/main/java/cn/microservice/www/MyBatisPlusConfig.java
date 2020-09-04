@@ -1,4 +1,4 @@
-package cn.microservice.www.config;
+package cn.microservice.www;
 
 import com.baomidou.mybatisplus.extension.plugins.OptimisticLockerInterceptor;
 import org.springframework.context.annotation.Bean;
