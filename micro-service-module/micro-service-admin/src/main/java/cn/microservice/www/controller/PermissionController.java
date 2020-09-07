@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/permission")
 public class PermissionController {
-    //@Autowired
+    @Autowired
     private PermissionService permissionSrv;
 
     @PostMapping(value = "/add")

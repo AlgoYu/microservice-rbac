@@ -14,6 +14,8 @@
         <module>micro-service-database</module>
         <module>micro-service-common</module>
         <module>micro-service-alibaba</module>
+        <module>micro-service-remote</module>
+        <module>micro-service-rpc</module>
     </modules>
 
     <artifactId>micro-service-framework</artifactId>

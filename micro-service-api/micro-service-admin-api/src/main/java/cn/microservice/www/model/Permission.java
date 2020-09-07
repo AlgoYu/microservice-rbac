@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.Version;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -14,13 +15,15 @@ import java.time.LocalDateTime;
  * @author MachineGeek
  */
 @Data
-public class Permission {
+public class Permission implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @TableId(value = "id",type = IdType.ASSIGN_ID)
     private Long id;
     private String permissionName;
-    private String permissionRemark;
+    private Long permissionParent;
+    private String permissionKey;
     private Integer permissionType;
+    private String permissionRemark;
     private Boolean isDisable;
     @TableLogic
     private Boolean isDelete;

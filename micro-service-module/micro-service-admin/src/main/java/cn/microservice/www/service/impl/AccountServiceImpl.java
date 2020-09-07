@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * 账户服务实现类
  * @author MachineGeek
  */
-@DubboService(version = "${service.version}",interfaceClass = AccountService.class)
+@DubboService(version = "1.0.0")
 @Service
 public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> implements AccountService {
 }

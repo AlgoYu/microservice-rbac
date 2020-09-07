@@ -7,7 +7,7 @@
     <!-- provider's application name, used for tracing dependency relationship -->
     <dubbo:application name="account-consumer"/>
     <!-- use multicast registry center to export service -->
-    <dubbo:registry address="nacos://192.168.0.100:80"/>
+    <dubbo:registry address="nacos://192.168.0.100:8848"/>
     <!-- use dubbo protocol to export service on port 20880 -->
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- declare the service interface to be exported -->

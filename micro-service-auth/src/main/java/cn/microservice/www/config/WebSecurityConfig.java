@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     PasswordEncoder passwordEncoder() {
         String idForEncode = "bcrypt";
-        Map encoders = new HashMap<>();
+        Map<String,PasswordEncoder> encoders = new HashMap<String,PasswordEncoder>();
         encoders.put(idForEncode, new BCryptPasswordEncoder());
         encoders.put("pbkdf2", new Pbkdf2PasswordEncoder());
         encoders.put("scrypt", new SCryptPasswordEncoder());

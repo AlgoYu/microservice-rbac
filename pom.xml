@@ -26,9 +26,11 @@
         <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <mysql-connector.version>8.0.21</mysql-connector.version>
         <druid.version>1.1.22</druid.version>
-        <knife4j.version>2.0.2</knife4j.version>
+        <knife4j.version>2.0.4</knife4j.version>
         <jbcrypt.version>0.4</jbcrypt.version>
-        <dubbo.version>2.7.8</dubbo.version>
+        <dubbo.version>2.7.7</dubbo.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <!-- 统一依赖管理 -->
@@ -55,6 +57,14 @@
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Apache Dubbo 依赖 -->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-bom</artifactId>
+                <version>${dubbo.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -100,12 +110,6 @@
                 <groupId>org.mindrot</groupId>
                 <artifactId>jbcrypt</artifactId>
                 <version>${jbcrypt.version}</version>
-            </dependency>
-            <!-- Dubbo 依赖 -->
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
