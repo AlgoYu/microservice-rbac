@@ -8,4 +8,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author MachineGeek
  */
 public interface AccountService extends IService<Account> {
+    Account getByName(String accountName);
 }

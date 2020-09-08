@@ -28,11 +28,11 @@ config:
 #########################################
 # Tomcat
 server:
-  port: 11000
+  port: 14000
 spring:
   # 服务名称
   application:
-    name: MICRO-SERVICE-ADMIN
+    name: MICRO-SERVICE-AUTH
   # 启用配置
   profiles:
     active: DEV
@@ -47,7 +47,7 @@ spring:
         file-extension: yaml
         namespace: Public
         group: DEVELOPMENT
-        prefix: MICRO-SERVICE-ADMIN
+        prefix: MICRO-SERVICE-AUTH
 # 日志
 logging:
   level:

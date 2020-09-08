@@ -3,7 +3,6 @@ package cn.microservice.www.controller;
 import cn.microservice.www.common.Result;
 import cn.microservice.www.model.Account;
 import cn.microservice.www.service.AccountService;
-import com.alibaba.dubbo.config.annotation.Reference;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping(value = "/test")
 public class TestController {
-    @DubboReference(version = "1.0.0",url = "dubbo://127.0.0.1:22884")
+    @DubboReference(version = "1.0.0",check = false)
     private AccountService accountService;
 
     @ResponseBody
