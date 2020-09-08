@@ -1,0 +1,21 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="simple" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.0.100:3306/micro_service"
+                        userId="root"
+                        password="123456"/>
+
+        <javaModelGenerator targetPackage="cn.microservice.www.model" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="cn.microservice.www.mapper" targetProject="src/main/java"/>
+
+        <table tableName="account" />
+        <table tableName="role" />
+        <table tableName="permission" />
+    </context>
+</generatorConfiguration>
