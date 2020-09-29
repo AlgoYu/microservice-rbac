@@ -16,6 +16,7 @@
         <module>micro-service-alibaba</module>
         <module>micro-service-remote</module>
         <module>micro-service-rpc</module>
+        <module>micro-service-alipay</module>
     </modules>
 
     <artifactId>micro-service-framework</artifactId>

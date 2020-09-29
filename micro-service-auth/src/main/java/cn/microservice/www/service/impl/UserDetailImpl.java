@@ -5,22 +5,20 @@ import cn.microservice.www.mapper.RoleMapper;
 import cn.microservice.www.model.Account;
 import cn.microservice.www.model.Role;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.springframework.aop.framework.autoproxy.AutoProxyUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-@Configuration
+@Service
 public class UserDetailImpl implements UserDetailsService {
     @Autowired
     private AccountMapper accountMapper;
@@ -32,7 +30,10 @@ public class UserDetailImpl implements UserDetailsService {
         QueryWrapper<Account> queryWrapper = new QueryWrapper<>();
         queryWrapper.lambda().eq(Account::getAccountName,s);
         Account account = accountMapper.selectOne(queryWrapper);
-        return new User(account.getAccountName(), account.getAccountPassword(), AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_ADMIN"));
+        if(account == null){
+            throw new UsernameNotFoundException("账户或密码无效！");
+        }
+        return new User(account.getAccountName(), account.getAccountPassword(), loadRolesByAccountId(account.getId()));
     }
 
     private Collection<GrantedAuthority> loadRolesByAccountId(Long accountId){
