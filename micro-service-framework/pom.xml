@@ -17,6 +17,7 @@
         <module>micro-service-remote</module>
         <module>micro-service-rpc</module>
         <module>micro-service-alipay</module>
+        <module>micro-service-wechat-pay</module>
     </modules>
 
     <artifactId>micro-service-framework</artifactId>
